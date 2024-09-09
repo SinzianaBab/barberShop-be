@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { AppointmentsModule } from './appointments/appointments.module';
-import { AppointmentEntity } from './appointments/enities/appointments.entity';
 
 @Module({
   imports: [
@@ -17,7 +16,7 @@ import { AppointmentEntity } from './appointments/enities/appointments.entity';
       database: 'barberShop',
       schema: 'public',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true,
+      synchronize: false,
     }),
     AppointmentsModule,
   ],

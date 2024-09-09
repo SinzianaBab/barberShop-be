@@ -7,15 +7,6 @@ import { GetAllAppointmentsQuery } from '../queries/get-all-appointments.query';
 
 @Injectable()
 export class AppointmentService {
-  // constructor(
-  //   @InjectRepository(AppointmentEntity)
-  //   private appointmentRepository: Repository<AppointmentEntity>,
-  // ) {}
-  //
-  // async create(appointment: CreateAppointmentDto) {
-  //   await this.appointmentRepository.save(appointment);
-  // }
-
   constructor(
     private commandBus: CommandBus,
     private queryBus: QueryBus,
